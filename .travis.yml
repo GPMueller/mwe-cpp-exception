@@ -6,29 +6,22 @@ matrix:
       osx_image: xcode11.2
     - os: osx
       osx_image: xcode10.3
-    - os: osx
-      osx_image: xcode9.4
-    - os: osx
-      osx_image: xcode8.3
-
 
     - os: linux
       dist: bionic
     - os: linux
       dist: xenial
-    - os: linux
-      dist: trusty
 
     - os: windows
 
 
 install:
-  - cd ${TRAVIS_BUILD_DIR}
   - |
+    cd ${TRAVIS_BUILD_DIR}
     mkdir -p build
     cd build
-    cmake ..
-  - make -j4
+  - cmake ..
+  - cmake --build . -j 4
 
 script:
   - ./../run
