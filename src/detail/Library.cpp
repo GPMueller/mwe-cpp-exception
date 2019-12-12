@@ -4,17 +4,15 @@
 namespace detail
 {
     void library_function()
+    try
     {
-        try
-        {
-            // some erronous code which throws an exception...
-            // let's pretend we weren't able to open a file
-            std::string filename = "nonexistent.txt";
-            library_throw("could not open file \"" + filename + "\"");
-        }
-        catch( const std::exception & )
-        {
-            library_rethrow("library_function failed")
-        }
+        // some erronous code which throws an exception...
+        // let's pretend we weren't able to open a file
+        std::string filename = "nonexistent.txt";
+        library_throw("could not open file \"" + filename + "\"");
+    }
+    catch( const std::exception & )
+    {
+        library_rethrow("library_function failed")
     }
 }
