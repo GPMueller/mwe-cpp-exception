@@ -3,6 +3,8 @@
 #include <string>
 #include <cstdlib>
 
+namespace mylib
+{
 namespace detail
 {
 namespace exception
@@ -45,5 +47,6 @@ namespace exception
         std::cerr << "Something went super-wrong! TERMINATING!" << std::endl;
         std::exit( EXIT_FAILURE );
     }
+}
 }
 }

@@ -3,6 +3,8 @@
 #include <stdexcept>
 #include <string>
 
+namespace mylib
+{
 namespace detail
 {
 namespace exception
@@ -47,4 +49,5 @@ namespace exception
 // Shorthand for handling an exception, including a backtrace
 #define library_handle_exception(ex) exception::Handle_Exception(ex, __func__);
 
+}
 }

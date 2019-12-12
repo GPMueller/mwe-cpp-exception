@@ -1,6 +1,12 @@
 #pragma once
 
-#define API_SUCCESS 0
-#define API_FAILURE 1
+namespace mylib
+{
+    enum class API_RETURN
+    {
+        SUCCESS,
+        FAILURE
+    };
 
-int api_function() noexcept;
+    API_RETURN function() noexcept;
+}

@@ -2,11 +2,11 @@
 #include <iostream>
 #include <cstdlib>
 
-int main(int argc, char ** argv)
+int main()
 {
-    auto value = api_function();
+    auto value = mylib::function();
 
-    if( value == API_SUCCESS )
+    if( value == mylib::API_RETURN::SUCCESS )
     {
         std::cerr << "Library call returned API_SUCCESS\n";
         // In this MWE, we expect api_function to fail and therefore to

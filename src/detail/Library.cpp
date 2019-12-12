@@ -1,6 +1,8 @@
 #include <detail/Library.hpp>
 #include <detail/Exception.hpp>
 
+namespace mylib
+{
 namespace detail
 {
     void library_function()
@@ -15,4 +17,5 @@ namespace detail
     {
         library_rethrow("library_function failed")
     }
+}
 }
