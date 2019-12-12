@@ -1,3 +1,6 @@
 #pragma once
 
-int api_function();
+#define API_SUCCESS 0
+#define API_FAILURE 1
+
+int api_function() noexcept;

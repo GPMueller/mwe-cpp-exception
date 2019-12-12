@@ -1,6 +1,7 @@
 #include <detail/Exception.hpp>
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 namespace detail
 {
@@ -38,7 +39,6 @@ namespace exception
             std::cerr << "Library API: Exception caught in function \'" << function << "\'" << std::endl;
         std::cerr << "Backtrace:" << std::endl;
         Backtrace(ex);
-        std::exit( EXIT_FAILURE );
     }
     catch( ... )
     {

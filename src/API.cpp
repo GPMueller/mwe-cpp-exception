@@ -2,14 +2,14 @@
 #include <detail/Library.hpp>
 #include <detail/Exception.hpp>
 
-int api_function()
+int api_function() noexcept
 try
 {
     detail::library_function();
-    return EXIT_SUCCESS;
+    return API_SUCCESS;
 }
 catch( const std::exception & ex )
 {
     detail::library_handle_exception(ex);
-    return EXIT_FAILURE;
+    return API_FAILURE;
 }
